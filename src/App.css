@@ -1,0 +1,143 @@
+.App {
+    text-align: center;
+}
+
+.App-logo {
+    height: 40vmin;
+    pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+    .App-logo {
+        animation: App-logo-spin infinite 20s linear;
+    }
+}
+
+.App-header {
+    background-color: #282c34;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    font-size: calc(10px + 2vmin);
+    color: white;
+}
+
+.App-link {
+    color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.productCart {
+    display: grid;
+    grid-template-columns: 2fr 1fr; /* Divide el contenedor en dos columnas, con una proporción de 2:1 */
+    gap: 20px; /* Espacio entre las columnas */
+}
+
+/* container kenneth*/
+
+
+.container {
+    display: flex;
+    justify-content: center;
+}
+
+.col-4 {
+    flex-basis: 33.33%;
+    padding: 0 10px;
+
+
+}
+
+.col-8 {
+    flex-basis: 66.66%;
+    padding: 0 10px;
+}
+
+.col-12 {
+    flex-basis: 100%;
+    padding: 0 10px;
+
+}
+
+.card {
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+    height:100%; /* Alto del viewport */
+    weight:100%; /* Alto del viewport */
+}
+
+
+/* Aplicar estilos específicos para pantallas más pequeñas */
+@media (max-width: 768px) {
+    .card {
+        flex-basis: 50%;
+        background-color: #b90a0a;
+        margin-bottom: 10px; /* Puedes ajustar este valor según tus necesidades */
+    }
+}
+
+/* Aplicar estilos específicos para pantallas aún más pequeñas */
+@media (max-width: 480px) {
+    .card {
+        flex-basis: 100%;
+        margin-bottom: 5px; /* Puedes ajustar este valor según tus necesidades */
+    }
+}
+
+/*boton carrito*/
+.cardIcon {
+    background-color: #f2f2f2;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.cart-button-personal {
+    align-items: center;
+    background: #09f;
+    border-radius: 9999px;
+    cursor: pointer;
+    display: flex;
+    height: 32px;
+    justify-content: center;
+    padding: 4px;
+    position: relative;
+    right: 8px;
+    transition: all .3s ease;
+    width: 32px;
+    z-index: 9999;
+    display: inline-flex;
+
+}
+
+.cart-button-personal:hover {
+    scale: 1.1;
+}
+
+.cart-button-personal ~ input:checked ~ .cart {
+    height: 100%;
+    display: block;
+}
+
+.cart-icon-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+
+}
