@@ -1,41 +1,42 @@
 import {createSlice, current} from '@reduxjs/toolkit';
 
-// Se Define el estado inicial del carrito
 const initialState = {
     products: [],
     cart: [],
+    cartStore: [],
     showCart: false,
 };
 
 export const cartSlice = createSlice({
-    name: 'cart',   //el nombre
-    initialState,   //el estado
-    reducers: {     //el reducer recibe inmediatamente la accion
+    name: 'cart',
+    initialState,
+    reducers: {
         addToCart: (state, action) => {
-            const productIncart = state.cart.findIndex(item => current(item).id === action.payload.id)
+            const productIncart = state.cart.findIndex(item => current(item).id == action.payload.id)
             if (productIncart >= 0) {
                 let priceProduct = action.payload.price
                 state.cart[productIncart].quantity += 1;
                 state.cart[productIncart].totalPrice += priceProduct;
-
             } else {
                 let priceProduct = action.payload.price
                 let newCart = action.payload;
                 newCart = Object.assign({}, action.payload);
                 newCart.quantity = 1;
-                newCart.totalPrice =priceProduct ;
+                newCart.totalPrice = priceProduct;
                 state.cart.push(newCart)
             }
         },
+        addToCartFromLocal: (state, action) => {
+            const savedCarts =   localStorage.getItem('cart');
+            state.cartStore=  JSON.parse(savedCarts)
+        },
         restToCart: (state, action) => {
             const productIncart = state.cart.findIndex(item => current(item).id === action.payload.id)
-            if (productIncart >= 0 && state.cart[productIncart].quantity>0) {
+            if (productIncart >= 0 && state.cart[productIncart].quantity > 0) {
                 let priceProduct = action.payload.price
                 state.cart[productIncart].quantity -= 1;
                 state.cart[productIncart].totalPrice -= priceProduct;
-
             }
-
         },
         removeFromCart: (state, action) => {
             const cartIdToRemove = action.payload;
@@ -52,13 +53,14 @@ export const cartSlice = createSlice({
             state.products.push(newProduct);
         },
         ShowCart: (state, action) => {
-            state.showCart=action.payload;
+            state.showCart = action.payload;
         },
     },
 });
 
 export const {
     addToCart,
+    addToCartFromLocal,
     restToCart,
     removeFromCart,
     addProduct,

@@ -3,44 +3,9 @@ import './Cart.css'
 import {useId} from 'react'
 import {CartIcon, ClearCartIcon} from './Icons.js'
 import {addToCart, clearCart, removeFromCart,restToCart} from "../redux/cartSlice";
-
 import {useDispatch, useSelector} from "react-redux";
 
-//import { useCart } from '../hooks/useCart.js'
-
-function CartItem({thumbnail, price, title, quantity,totalPrice, addToCart,restToCart}) {
-
-    return (
-        <li>
-            <small className="circle-background">
-                {quantity}
-            </small>
-            <img
-                src={thumbnail}
-                alt={title}
-            />
-
-
-            <footer >
-                <label>
-                    <small>{title}:</small>  ${totalPrice}
-                </label>
-
-                <label>
-                    <button onClick={(product)=>restToCart()}>-
-                    </button>
-                    <button onClick={(product)=>addToCart()}>+
-                    </button>
-                </label>
-
-            </footer>
-        </li>
-    )
-}
-
 export function Wompi() {
-
-
     return (
 
                 <form>

@@ -2,7 +2,7 @@ import ProductComponent from './components/ProductComponent';
 import './App.css';
 import {Products} from "./components/Products";
 import {Cart} from "./components/Cart";
-import {CartIcon,WallIcon} from "./components/Icons";
+import {CartIcon, WallIcon} from "./components/Icons";
 import {useId} from "react";
 import {ShowCart} from "./redux/cartSlice";
 import {useDispatch, useSelector} from "react-redux";
@@ -25,15 +25,13 @@ function App() {
             <div className="container">
                 <div className="col-12">
                     <div className="cardIcon">
-                        <div className="cart-icon-container " >
+                        <div className="cart-icon-container ">
                             <label onClick={() => showCartFunction()} className='cart-button-personal'
                                    htmlFor={cartCheckboxId}>
                                 <WallIcon/>
                             </label>
                             <span>Store</span>
-
                         </div>
-
                         <label>
                             MINI MARKET
                         </label>
@@ -42,7 +40,6 @@ function App() {
                             <CartIcon/>
                         </label>
                     </div>
-
                 </div>
             </div>
             <div className="container">
@@ -52,17 +49,13 @@ function App() {
                         <Products/>
                     </div>
                 </div>
-
                 <div className="col-4">
                     <div className="card">
                         <Cart/>
                     </div>
                 </div>
             </div>
-
-
         </div>
     );
 }
-
 export default App;

@@ -5,9 +5,7 @@
   top: 0px;
   width: 80%;
   margin-right: initial;*/
-
 }
-
 .cart h4 {
   border-bottom: 2px solid black
 }
@@ -15,12 +13,10 @@
   aspect-ratio: 16/9;
   width: 100%;
 }
-
 .cart li {
   border-bottom: 1px solid #444;
   padding-bottom: 16px;
 }
-
 .cart footer {
   display: flex;
   gap: 8px;
@@ -28,7 +24,6 @@
   align-items: center;
   justify-content: space-around;
 }
-
 .cart footer button {
   padding: 5px;
   border-radius: 2px;
@@ -53,11 +48,9 @@
   width: 32px;
   z-index: 9999;
 }
-
 .cart-button:hover {
   scale: 1.1;
 }
-
 .cart-button ~ input:checked ~ .cart {
   height: 100%;
   display: block;

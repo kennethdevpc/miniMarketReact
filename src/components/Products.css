@@ -3,7 +3,6 @@
   justify-content: center;
   align-items: center;
 }
-
 .products ul {
     display: grid;
     grid-template-columns: repeat(
@@ -32,14 +31,10 @@
     flex-direction: column;
     justify-content: space-around;
 }
-
-
-
 .products span {
     font-size: 1rem;
     opacity: .9;
 }
-
 .products img {
     border-radius: 4px;
     width: 100%;
