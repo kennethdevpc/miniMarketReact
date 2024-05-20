@@ -65,7 +65,7 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 
 ### <h3> 🤝🏻 &nbsp;Connect with Me </h3>
 
-Email: **kennethdevpc@gmail.com**
+
 
 Wpp: **<a href="https://wa.link/2rl3qe"> +573184484423 </a>**
 
